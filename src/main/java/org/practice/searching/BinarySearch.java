@@ -8,7 +8,10 @@ public class BinarySearch {
 			if(arr[mid] == element) return mid;
 			else if(arr[mid]>element) high = mid-1;
 			else low = mid +1;
+
+
 		}
+		return -1;
 	}
 
 }
