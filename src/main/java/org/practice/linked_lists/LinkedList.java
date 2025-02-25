@@ -2,7 +2,7 @@ package org.practice.linked_lists;
 
 public class LinkedList {
 
-	Node head;
+	static Node head;
 
 	public LinkedList() {
 
@@ -12,7 +12,7 @@ public class LinkedList {
 		head = new Node(data);
 	}
 
-	public int length() {
+	public static int length() {
 		if (head == null) return 0;
 		if (head.next == null) return 1;
 		Node temp = head;
@@ -24,7 +24,7 @@ public class LinkedList {
 		return count;
 	}
 
-	public void traverse() {
+	public static void traverse() {
 		if (head == null) {
 			System.out.println("No Node found to traverse!");
 			return;
@@ -38,7 +38,7 @@ public class LinkedList {
 
 	}
 
-	public void addAtEnd(int data) {
+	public static void addAtEnd(int data) {
 		if (head == null) {
 			return;
 		}
@@ -50,7 +50,7 @@ public class LinkedList {
 		temp.next = newNode;
 	}
 
-	public void addAtStart(int data) {
+	public static void addAtStart(int data) {
 		if (head == null) {
 			Node newNode = new Node(data);
 			head = newNode;
@@ -61,7 +61,7 @@ public class LinkedList {
 		head = newNode;
 	}
 
-	public void addAtPos(int data, int pos) {
+	public static void addAtPos(int data, int pos) {
 
 		if (pos == 1) {
 			addAtStart(data);
@@ -84,7 +84,7 @@ public class LinkedList {
 		newNode.next = temp2;
 	}
 
-	public void deleteAtEnd() {
+	public static void deleteAtEnd() {
 		if (head == null) {
 			System.out.println("No element to delete!");
 			return;
@@ -104,7 +104,7 @@ public class LinkedList {
 		temp.next = null;
 	}
 
-	public void deleteAtStart() {
+	public static void deleteAtStart() {
 		if (head == null) {
 			System.out.println("No element to delete!");
 			return;
@@ -118,7 +118,7 @@ public class LinkedList {
 		head = head.next;
 	}
 
-	public void deleteByElement(int element) {
+	public static void deleteByElement(int element) {
 		if (head == null) {
 			System.out.println("No element to delete!");
 			return;
