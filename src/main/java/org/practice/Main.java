@@ -1,12 +1,6 @@
 package org.practice;
 
-import org.practice.arrays.duplicates;
-import org.practice.linked_lists.LinkedList;
-import org.practice.linked_lists.Node;
-import org.practice.sorting.BubbleSort;
-import org.practice.sorting.InsertionSort;
-import org.practice.sorting.SelectionSort;
-import org.practice.string.Reverse;
+import org.practice.array_list.duplicates;
 
 import java.util.HashMap;
 

@@ -1,4 +1,4 @@
-package org.practice.arrays;
+package org.practice.array_list;
 
 import java.util.HashSet;
 
