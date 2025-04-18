@@ -1,21 +1,28 @@
 package org.practice.sorting;
 
 public class BubbleSort {
-	public static void sort(int arr[]){
-		for(int i=arr.length-2; i>=0; i-- ){
-			for(int j=0; j<= i; j++){
-				if(arr[j]>arr[j+1]){
-					arr[j] = arr[j]^arr[j+1];
-					arr[j+1] = arr[j]^arr[j+1];
-					arr[j] = arr[j]^arr[j+1];
+	public static void main(String[] args) {
+		int arr[] = {10, 15, 5,6,23,3,0, -6};
+		System.out.println("Before:");
+		for(int n:arr){
+			System.out.print(n+", ");
+		}
+		System.out.println();
+
+		for(int i=0; i<arr.length; i++){
+			for(int j=0; j < arr.length-1-i; j++ ){
+				if(arr[j]<=arr[j+1]){
+					continue;
+				}else{
+					int temp = arr[j];
+					arr[j] =  arr[j+1];
+					arr[j+1] = temp;
 				}
 			}
-			System.out.println("Pass: "+ (arr.length-i-1));
-			for(int n=0; n<arr.length;n++){
-				if(n == i+1) System.out.print("| "+arr[n]+" ");
-				else System.out.print(arr[n]+" ");
-			}
-			System.out.println();
+		}
+		System.out.println("After:");
+		for(int n:arr){
+			System.out.print(n+", ");
 		}
 	}
 
